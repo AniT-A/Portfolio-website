@@ -10,9 +10,9 @@ body {
   width: 100vw;
   height: 100vh;
 }
-/* a blue color as a generic focus style */
+
 button:focus-visible {
-  outline: 2px solid #4a90e2 !important;
+  outline: 2px solid #c3d1e2 !important;
   outline: -webkit-focus-ring-color auto 5px !important;
 }
 a {

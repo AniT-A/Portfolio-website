@@ -7,7 +7,7 @@
   flex: 0 0 auto;
   justify-content: center;
   width: 100vw;
-  height: 260vh;
+  height: 300vh;
 }
 
 .landing-page .nav {
@@ -40,11 +40,11 @@
   height: 7vh;
   top: 3vh;
   left: 3vw;
-  font-size: 2.5rem;
-  letter-spacing: 0.2rem;
   font-family: "Anton", Helvetica;
   font-weight: 400;
   color: #ffffff;
+  font-size: clamp(1rem, 3vw, 2.5rem);
+  letter-spacing: 0.2rem;
   line-height: normal;
 }
 
@@ -60,6 +60,16 @@
   gap: 4vw;
 }
 
+a {
+  font-family: "Anton", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: clamp(1rem, 2vw, 2rem);
+  text-align: center;
+  letter-spacing: 0.1rem;
+  line-height: normal;
+}
+
 .landing-page .navbar-items {
   position: relative;
   flex: 0 0 auto;
@@ -72,7 +82,7 @@
   position: absolute;
   display: flex;
   width: 100vw;
-  height: 250vh;
+  height: 300vh;
   top: 0;
 }
 
@@ -80,35 +90,31 @@
   position: absolute; 
   display: flex;
   width: 100vw;
-  height: 90vh;
-  top: 10vh;
+  height: 100vh;
+  top: 0;
 }
 
 .landing-page .about-left {
   position: absolute;
-  width: 27vw;
-  height: 70vh;
-  max-width: 27vw;
-  min-width: 20vw;
-  max-height: 70vh;
-  min-height: 35vh;
-  top: 5vh;
-  left: 3vw;
+  width: 30vw;
+  height: 80vh;
+  top: 20vh;
+  left: 0;
 }
 
 .landing-page .portrait {
   position: absolute;
-  width: 15vw;
-  height: 25vh;
-  max-width: 15vw;
+  width: 10vw;
+  height: 20vh;
+  max-width: 8vw;
   min-width: 5vw;
-  max-height: 25vh;
+  max-height: 20vh;
   min-height: 15vh;
-  top: 20vh;
-  left: 5vw;
+  top: 25vh;
+  left: 12vw;
 }
 
-.landing-page .ellipse-p1 {
+.landing-page .ellipse-a2 {
   position: absolute;
   width: 15vw;
   height: 15vh;  
@@ -116,13 +122,13 @@
   min-width: 5vw;
   max-height: 15vh;
   min-height: 5vh;
-  top: 10vh;
+  top: 15vh;
   left: 15vw;
-  background-image: url(../images/ellipse-p1.png);
+  background-image: url(../images/ellipse-a2.svg);
   background-size: 100% 100%;
 }
 
-.landing-page .ellipse-p2 {
+.landing-page .ellipse-a3 {
   position: absolute;
   width: 10vw;
   height: 10vh;
@@ -130,70 +136,61 @@
   min-width: 5vw;
   max-height: 10vh;
   min-height: 5vh;
-  top: 50vh;
-  left: 0;
-  /*border-radius: 42.75px/46.59px;*/
-  background-image: url(../images/ellipse-p2.svg);
+  top: 48vh;
+  left: 5vw;
+  background-image: url(../images/ellipse-a3.svg);
   background-size: 100% 100%;
-}
-
-.landing-page .ellipse-p3 {
-  position: absolute;
-  width: 63px;
-  height: 69px;
-  top: 0;
-  left: 17px;
-  background-color: #200d49;
-  border-radius: 31.72px/34.57px;
 }
 
 .landing-page .about-right {
   position: absolute;
-  width: 67vw;
-  height: 70vh;
-  max-width: 67vw;
-  min-width: 40vw;
-  max-height: 70vh;
-  min-height: 35vh;
-  top: 5vh;
-  right: 3vw;
+  width: 70vw;
+  height: 80vh;
+  top: 20vh;
+  right: 0;
 }
 
 .landing-page .about-me {
   position: absolute;
-  width: 57vw;
-  height: 60vh;
-  top: 5vw;
-  right: 0;
-  background-image: url(../images/about\ tile.png);
+  width: 70vw;
+  height: 70vh;
+  max-width: 70vw;
+  min-width: 70vw;
+  max-height: 80vh;
+  min-height: 65vh;
+  top: 0;
+  left: 0;
+  background-image: url(../images/about-tile.svg);
   background-size: 100% 100%;
 }
 
 .landing-page .about-title {
   position: absolute;
   width: 20vh;
-  top: 5vh;
+  top: 8vh;
   left: 10vw;
-  font-size: 2rem;
-  letter-spacing: 0.2rem;
   font-family: "Anton", Helvetica;
   font-weight: 400;
   color: #ffffff;
+  font-size: clamp(0.5rem, 2vw, 2rem);
+  letter-spacing: 0.2rem;
   line-height: normal;
 }
 
 .landing-page .about-text {
-  position: absolute;
-  width: 40vw;
+  position: relative;
+  width: 45vw;
   height: 30vh;
-  top: 12vh;
+  top: 15vh;
   left: 10vw;
+  right: 10vw;
   font-family: "Noto Sans", Helvetica;
   font-weight: 400;
   color: #ffffff;
-  font-size: 1rem;
+  font-size: clamp(0.5rem, 1vw, 2rem);
   letter-spacing: 0.1rem;
-  line-height: normal;
+  line-height: 1.5;
+  text-align: justify;
 }
 
 .landing-page .ellipse-a1 {
@@ -204,9 +201,9 @@
   min-width: 10vw;
   max-height: 20vh;
   min-height: 10vh;
-  top: 0;
-  right: 0;
-  background-image: url(../images/ellipse-A1.svg);
+  top: 12vh;
+  right: -5vw;
+  background-image: url(../images/ellipse-a1.svg);
   background-size: 100% 100%;
 }
 
@@ -222,22 +219,30 @@
 }
 
 .landing-page .projects-title {
-  position: block;
-  top: 8vh;
+  position: relative;
+  width: 15vw;
+  height: 10vh;
+  top: 10vh;
   margin-left: auto;
   margin-right: auto;
+  vertical-align: center;
+  text-align: center;
   font-family: "Anton", Helvetica;
   font-weight: 400;
   color: #ffffff;
-  font-size: 3rem;
-  letter-spacing: 0.5rem;
+  font-size: clamp(1rem, 3vw, 3rem);
+  letter-spacing: 0.2rem;
   line-height: normal;
 }
 
 .landing-page .tube-1 {
   position: absolute;
-  width: 20vw;
+  width: 15vw;
   height: 20vh;
+  max-width: 15vw;
+  min-width: 10vw;
+  max-height: 20vh;
+  min-height: 10vh;
   top: -3vh;
   left: 1vw;
   background-image: url(../images/tube-1.png);
@@ -249,7 +254,7 @@
   width: 10vw;
   height: 15vh;
   top: 27vh;
-  left: 3vw;
+  left: 5vw;
   background-image: url(../images/tube-2.png);
   background-size: 100% 100%;
 }
@@ -258,6 +263,10 @@
   position: absolute;
   width: 15vw;
   height: 15vh;
+  max-width: 15vw;
+  min-width: 10vw;
+  max-height: 15vh;
+  min-height: 10vh;
   top: 11vh;
   right: 6vw;
   background-image: url(../images/cube-1.png);
@@ -268,7 +277,7 @@
   position: absolute;
   width: 10vw;
   height: 15vh;
-  top: 35vh;
+  top: 40vh;
   right: 2vw;
   background-image: url(../images/pyramid-1.png);
   background-size: 100% 100%;
@@ -278,16 +287,20 @@
   position: absolute;
   width: 10vw;
   height: 12vh;
-  top: 60vh;
-  right: 35vw;
+  top: 70vh;
+  right: 30vw;
   background-image: url(../images/cone-1.png);
   background-size: 100% 100%;
 }
 
 .landing-page .cube-2 {
   position: absolute;
-  width: 18vw;
-  height: 15vh;
+  width: 15vw;
+  height: 13vh;
+  max-width: 15vw;
+  min-width: 8vw;
+  max-height: 13vh;
+  min-height: 6vh;
   top: 80vh;
   left: 15vw;
   background-image: url(../images/cube-2.png);
@@ -296,9 +309,9 @@
 
 .landing-page .projects-left {
   position: absolute;
-  width: 50vw;
-  height: 40vh;
-  top: 20vh;
+  width: 45vw;
+  height: 45vh;
+  top: 25vh;
   left: 5vw;
 }
 
@@ -306,13 +319,11 @@
   position: absolute;
   display: flex;
   width: 40vw;
-  height: 40vh;
+  height: 45vh;
   top: 0;
   left: 0;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 150px 150px;
   background: linear-gradient(180deg,
       rgb(38, 8, 103) 0%,
       rgba(38, 8, 103, 0) 100%);
@@ -320,23 +331,24 @@
 
 .landing-page .threedee-title {
   position: absolute;
+  display: flex;
   width: 20vw;
   height: 20vh;
+  align-items: center;
+  justify-content: center;
 }
 
 .landing-page .threedee-img {
   position: absolute;
   width: 10vw;
   height: 10vh;
-  top: 5vw;
-  left: 5vh;
 }
 
 .landing-page .projects-right {
   position: absolute;
-  width: 50vw;
-  height: 40vh;
-  top: 20vh;
+  width: 45vw;
+  height: 45vh;
+  top: 25vh;
   right: 5vw;
 }
 
@@ -344,30 +356,30 @@
   position: absolute;
   display: flex;
   width: 40vw;
-  height: 40vh;
+  height: 45vh;
   top: 0;
   right: 0;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 100px 100px;
   background: linear-gradient(180deg,
       rgb(38, 8, 103) 0%,
       rgba(38, 8, 103, 0) 100%);
 }
 
 .landing-page .code-title {
-  position: absolute;
+  position: absolute; 
+  display: flex;
   width: 20vw;
   height: 20vh;
+  vertical-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .landing-page .code-img {
   position: absolute;
   width: 15vw;
   height: 10vh;
-  top: 5vh;
-  right: 3vw;
 }
 /*
   
@@ -376,79 +388,75 @@
   position: absolute;
   display: flex;
   width: 100vw;
-  height: 100vw;
+  height: 95vh;
   top: 200vh;
 }
 
 .landing-page .contact-tile {
-  position: absolute;
+  position: relative;
+  margin-left: 30vw;
+  margin-right: auto;
   align-items: center;
-  width: 50vw;
-  height: 40vh;
-  top: 5vh;
-  left: 30vw;
+  justify-content: center;
+  width: 30vw;
+  height: 30vh;
+  top: 10vh;
 }
 
 .landing-page .contact-title {
   position: absolute;
+  width: 30vw;
   height: 10vh;
-  top: 0;
-  left: 5vw;
+  top: 5vh;
+  align-items: center;
+  justify-content: center;
   font-family: "Anton", Helvetica;
   font-weight: 400;
   color: #ffffff;
-  font-size: 3rem;
+  font-size: clamp(1rem, 3vw, 3rem);
   text-align: center;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.2rem;
   line-height: normal;
 }
 
 .landing-page .icons {
   position: absolute;
-  width: 40vw;
+  display: flex;
+  width: 30vw;
   height: 10vh;
-  top: 15vh;
-  left: 0;
+  top: 20vh;
+  gap: 3vw;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  justify-content: center;
 }
 
 .landing-page .github {
-  position: absolute;
+  position: relative;
   width: 7vw;
   height: 7vh;
   top: 0;
-  left: 0;
 }
 
 .landing-page .linkedin {
-  position: absolute;
+  position: relative;
   width: 7vw;
   height: 7vh;
-  top: 0;
-  left: 10vw;
 }
 
 .landing-page .mail {
-  position: absolute;
+  position: relative;
   width: 7vw;
   height: 7vh;
-  top: 0;
-  left: 20vw;
-}
-
-.landing-page .ellipse {
-  position: absolute;
-  width: 160px;
-  height: 160px;
-  top: 0;
-  left: 238px;
 }
 
 .landing-page .ellipse-wrapper {
-  position: relative;
+  position: absolute;
   width: 20vw;
   height: 20vh;
-  top: 25vh;
-  left: 15vw;
+  top: 40vh;
+  left: 20vw;
 }
 
 .landing-page .ellipse-c1 {
@@ -460,16 +468,20 @@
   /*background-color: #391a61;
   border-radius: 69.5px;
   filter: blur(50px);*/
-  background-image: url(../images/ellipse-C1.svg);
+  background-image: url(../images/ellipse-c1.svg);
   background-size: 100% 100%;
 }
 
 .landing-page .sphere {
   position: absolute;
-  width: 15vw;
-  height: 15vh;
-  top: -10vh;
-  right: 20vw;
+  width: 12vw;
+  height: 12vh;
+  max-width: 15vw;
+  min-width: 5vw;
+  max-height: 15vh;
+  min-height: 5vh;
+  top: 0;
+  right: 12vw;
   background-image: url(../images/sphere-1.png);
   background-size: 100% 100%;
 }
@@ -478,8 +490,12 @@
   position: absolute;
   width: 15vw;
   height: 10vh;
-  top: 20vh;
-  right: 10vw;
+  max-width: 12vw;
+  min-width: 7vw;
+  max-height: 10vh;
+  min-height: 5vh;
+  top: 30vh;
+  right: 5vw;
   background-image: url(../images/ring-1.png);
   background-size: 100% 100%;
 }
@@ -489,33 +505,30 @@
 */
 .landing-page .bg-shape-wrapper1 {
   position: absolute;
-  display: inline-flex;
-  justify-content: flex-end;
-  width: 20vw;
-  height: 20vh;
-  top: 90vh;
-  right: -10vw;
+  display: flex;
+  width: 15vw;
+  height: 15vh;
+  top: 100vh;
+  right: -7vw;
   align-items: center; 
 }
 
 .landing-page .bg-shape-1 {
-  position: absolute;
-  width: 20vw;
-  height: 20vh;
+  position: relative;
+  width: 15vw;
+  height: 15vh;
   background-color: #30a6cc;
-  filter: blur(200px);
+  filter: blur(10vw);
 }
 
 .landing-page .bg-shape-wrapper2 {
   position: absolute;
   display: flex;
-  justify-content: flex-start;
-  width: 20vw;
-  height: 20vh;
-  top: 170vh;
-  left: -10vw;
+  width: 15vw;
+  height: 15vh;
+  top: 190vh;
+  left: -7vw;
   align-items: center;
-
 }
 
 .landing-page .bg-shape-2 {
@@ -523,17 +536,16 @@
   width: 20vw;
   height: 20vh;
   background-color: #317762;
-  filter: blur(100px);
+  filter: blur(10vw);
 }
 
 .landing-page .bg-shape-wrapper3 {
   position: absolute;
   display: flex;
-  justify-content: flex-end;
-  width: 20vw;
-  height: 20vh;
-  top: 200vh;
-  right: -10vw;
+  width: 15vw;
+  height: 15vh;
+  top: 210vh;
+  right: -7vw;
   align-items: center;
 }
 
@@ -543,7 +555,7 @@
   height: 20vh;
   background-color: #4c0e4a;
   transform: rotate(45deg);
-  filter: blur(100px);
+  filter: blur(10vw);
 }
 
 .landing-page .footer {
@@ -551,7 +563,7 @@
   display: flex;
   width: 100vw;
   height: 5vh;
-  top: 250vh;
+  top: 295vh;
   transform: rotate(-180deg);
   filter: blur(100px);
   background: linear-gradient(180deg,
