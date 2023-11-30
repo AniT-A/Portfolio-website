@@ -1,16 +1,17 @@
-.landing-page {
+body {
   position: relative;
   background-color: #200d49;
-  overflow: hidden;
-  display: flex;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  /*display: flex;
   flex-direction: row;
   flex: 0 0 auto;
   justify-content: center;
   width: 100vw;
-  height: 300vh;
+  height: 300vh;*/
 }
 
-.landing-page .nav {
+nav {
   position: fixed;
   overflow: hidden;
   width: 100vw;
@@ -21,7 +22,7 @@
   /*background-color: transparent;*/
 }
 
-.landing-page .header-background {
+.header-background {
   position: fixed;
   width: 100vw;
   height: 10vh;
@@ -34,7 +35,7 @@
       rgb(117.42, 52.06, 255) 100%);
 }
 
-.landing-page .header-title {
+.header-title {
   position: fixed;
   width: 50vw;
   height: 7vh;
@@ -48,7 +49,7 @@
   line-height: normal;
 }
 
-.landing-page .navbar {
+.navbar {
   position: fixed;
   display: flex;
   width: 33vw;
@@ -70,7 +71,7 @@ a {
   line-height: normal;
 }
 
-.landing-page .navbar-items {
+.navbar-items {
   position: relative;
   flex: 0 0 auto;
 }
@@ -78,15 +79,8 @@ a {
 /*
 
 */
-.landing-page .body {
-  position: absolute;
-  display: flex;
-  width: 100vw;
-  height: 300vh;
-  top: 0;
-}
 
-.landing-page .about {
+.about {
   position: absolute; 
   display: flex;
   width: 100vw;
@@ -94,7 +88,7 @@ a {
   top: 0;
 }
 
-.landing-page .about-left {
+.about-left {
   position: absolute;
   width: 30vw;
   height: 80vh;
@@ -102,7 +96,7 @@ a {
   left: 0;
 }
 
-.landing-page .portrait {
+.portrait {
   position: absolute;
   width: 10vw;
   height: 20vh;
@@ -114,7 +108,7 @@ a {
   left: 12vw;
 }
 
-.landing-page .ellipse-a2 {
+.ellipse-a2 {
   position: absolute;
   width: 15vw;
   height: 15vh;  
@@ -128,7 +122,7 @@ a {
   background-size: 100% 100%;
 }
 
-.landing-page .ellipse-a3 {
+.ellipse-a3 {
   position: absolute;
   width: 10vw;
   height: 10vh;
@@ -142,7 +136,7 @@ a {
   background-size: 100% 100%;
 }
 
-.landing-page .about-right {
+.about-right {
   position: absolute;
   width: 70vw;
   height: 80vh;
@@ -150,7 +144,7 @@ a {
   right: 0;
 }
 
-.landing-page .about-me {
+.about-me {
   position: absolute;
   width: 70vw;
   height: 70vh;
@@ -164,7 +158,7 @@ a {
   background-size: 100% 100%;
 }
 
-.landing-page .about-title {
+.about-title {
   position: absolute;
   width: 20vh;
   top: 8vh;
@@ -177,7 +171,7 @@ a {
   line-height: normal;
 }
 
-.landing-page .about-text {
+.about-text {
   position: relative;
   width: 45vw;
   height: 30vh;
@@ -193,7 +187,7 @@ a {
   text-align: justify;
 }
 
-.landing-page .ellipse-a1 {
+.ellipse-a1 {
   position: absolute;
   width: 20vw;
   height: 20vh;
@@ -210,7 +204,7 @@ a {
 /*
 
 */
-.landing-page .projects {
+.projects {
   position: absolute;
   display: flex;
   width: 100vw;
@@ -218,7 +212,7 @@ a {
   top: 100vh;
 }
 
-.landing-page .projects-title {
+.projects-title {
   position: relative;
   width: 15vw;
   height: 10vh;
@@ -235,7 +229,7 @@ a {
   line-height: normal;
 }
 
-.landing-page .tube-1 {
+.tube-1 {
   position: absolute;
   width: 15vw;
   height: 20vh;
@@ -249,7 +243,7 @@ a {
   background-size: 100% 100%;
 }
 
-.landing-page .tube-2 {
+.tube-2 {
   position: absolute;
   width: 10vw;
   height: 15vh;
@@ -259,7 +253,7 @@ a {
   background-size: 100% 100%;
 }
 
-.landing-page .cube-1 {
+.cube-1 {
   position: absolute;
   width: 15vw;
   height: 15vh;
@@ -273,7 +267,7 @@ a {
   background-size: 100% 100%;
 }
 
-.landing-page .pyramid {
+.pyramid {
   position: absolute;
   width: 10vw;
   height: 15vh;
@@ -283,7 +277,7 @@ a {
   background-size: 100% 100%;
 }
 
-.landing-page .cone {
+.cone {
   position: absolute;
   width: 10vw;
   height: 12vh;
@@ -293,7 +287,7 @@ a {
   background-size: 100% 100%;
 }
 
-.landing-page .cube-2 {
+.cube-2 {
   position: absolute;
   width: 15vw;
   height: 13vh;
@@ -307,7 +301,7 @@ a {
   background-size: 100% 100%;
 }
 
-.landing-page .projects-left {
+.projects-left {
   position: absolute;
   width: 45vw;
   height: 45vh;
@@ -315,7 +309,7 @@ a {
   left: 5vw;
 }
 
-.landing-page .threedee {
+.threedee {
   position: absolute;
   display: flex;
   width: 40vw;
@@ -329,7 +323,7 @@ a {
       rgba(38, 8, 103, 0) 100%);
 }
 
-.landing-page .threedee-title {
+.threedee-title {
   position: absolute;
   display: flex;
   width: 20vw;
@@ -338,13 +332,13 @@ a {
   justify-content: center;
 }
 
-.landing-page .threedee-img {
+.threedee-img {
   position: absolute;
   width: 10vw;
   height: 10vh;
 }
 
-.landing-page .projects-right {
+.projects-right {
   position: absolute;
   width: 45vw;
   height: 45vh;
@@ -352,7 +346,7 @@ a {
   right: 5vw;
 }
 
-.landing-page .code {
+.code {
   position: absolute;
   display: flex;
   width: 40vw;
@@ -366,7 +360,7 @@ a {
       rgba(38, 8, 103, 0) 100%);
 }
 
-.landing-page .code-title {
+.code-title {
   position: absolute; 
   display: flex;
   width: 20vw;
@@ -376,7 +370,7 @@ a {
   justify-content: center;
 }
 
-.landing-page .code-img {
+.code-img {
   position: absolute;
   width: 15vw;
   height: 10vh;
@@ -384,7 +378,7 @@ a {
 /*
   
 */
-.landing-page .contact {
+.contact {
   position: absolute;
   display: flex;
   width: 100vw;
@@ -392,7 +386,7 @@ a {
   top: 200vh;
 }
 
-.landing-page .contact-tile {
+.contact-tile {
   position: relative;
   margin-left: 30vw;
   margin-right: auto;
@@ -403,7 +397,7 @@ a {
   top: 10vh;
 }
 
-.landing-page .contact-title {
+.contact-title {
   position: absolute;
   width: 30vw;
   height: 10vh;
@@ -419,7 +413,7 @@ a {
   line-height: normal;
 }
 
-.landing-page .icons {
+.icons {
   position: absolute;
   display: flex;
   width: 30vw;
@@ -432,26 +426,26 @@ a {
   justify-content: center;
 }
 
-.landing-page .github {
+.github {
   position: relative;
   width: 7vw;
   height: 7vh;
   top: 0;
 }
 
-.landing-page .linkedin {
+.linkedin {
   position: relative;
   width: 7vw;
   height: 7vh;
 }
 
-.landing-page .mail {
+.mail {
   position: relative;
   width: 7vw;
   height: 7vh;
 }
 
-.landing-page .ellipse-wrapper {
+.ellipse-wrapper {
   position: absolute;
   width: 20vw;
   height: 20vh;
@@ -459,7 +453,7 @@ a {
   left: 20vw;
 }
 
-.landing-page .ellipse-c1 {
+.ellipse-c1 {
   position: absolute;
   width: 20vw;
   height: 20vh;
@@ -472,7 +466,7 @@ a {
   background-size: 100% 100%;
 }
 
-.landing-page .sphere {
+.sphere {
   position: absolute;
   width: 12vw;
   height: 12vh;
@@ -486,7 +480,7 @@ a {
   background-size: 100% 100%;
 }
 
-.landing-page .ring {
+.ring {
   position: absolute;
   width: 15vw;
   height: 10vh;
@@ -499,11 +493,10 @@ a {
   background-image: url(../images/ring-1.png);
   background-size: 100% 100%;
 }
-
 /*
   
 */
-.landing-page .bg-shape-wrapper1 {
+.bg-shape-wrapper1 {
   position: absolute;
   display: flex;
   width: 15vw;
@@ -513,7 +506,7 @@ a {
   align-items: center; 
 }
 
-.landing-page .bg-shape-1 {
+.bg-shape-1 {
   position: relative;
   width: 15vw;
   height: 15vh;
@@ -521,7 +514,7 @@ a {
   filter: blur(10vw);
 }
 
-.landing-page .bg-shape-wrapper2 {
+.bg-shape-wrapper2 {
   position: absolute;
   display: flex;
   width: 15vw;
@@ -531,7 +524,7 @@ a {
   align-items: center;
 }
 
-.landing-page .bg-shape-2 {
+.bg-shape-2 {
   position: relative;
   width: 20vw;
   height: 20vh;
@@ -539,7 +532,7 @@ a {
   filter: blur(10vw);
 }
 
-.landing-page .bg-shape-wrapper3 {
+.bg-shape-wrapper3 {
   position: absolute;
   display: flex;
   width: 15vw;
@@ -549,7 +542,7 @@ a {
   align-items: center;
 }
 
-.landing-page .bg-shape-3 {
+.bg-shape-3 {
   position: relative;
   width: 20vw;
   height: 20vh;
@@ -558,7 +551,7 @@ a {
   filter: blur(10vw);
 }
 
-.landing-page .footer {
+.footer {
   position: absolute;
   display: flex;
   width: 100vw;
@@ -571,4 +564,93 @@ a {
       rgb(54.94, 24.01, 120.06) 32.81%,
       rgb(90.92, 39.74, 198.69) 65.08%,
       rgb(117.42, 52.06, 255) 100%);
+}
+/*
+  
+*/
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider {
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  width: 100%;
+  max-width: 900px;
+  padding-top: 50%;
+}
+
+.slide {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  font-weight: bold;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 1s;
+  opacity: 0;
+}
+
+.slide.img {
+  width: 100%;
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 2vw;
+  margin-top: -25px;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  transition: 0.6s ease;
+  border-radius: 50%;
+  user-select: none;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.prev:hover, .next:hover {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.dot {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  top: 90%;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.slide-1, .slide-2, .slide-3, .slide-4, .slide-5 {
+  display: none;
+
 }

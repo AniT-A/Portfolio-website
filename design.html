@@ -12,30 +12,43 @@
   <link rel="stylesheet" href="styles/globals.css" />
   <link rel="stylesheet" href="styles/styleguide.css" />
   <link rel="stylesheet" href="styles/style.css" />
+
 </head>
 
 <body>
+  <!--<nav>
+    <div class="header-background"></div>
+    <div class="header-title">TINA’S PORTFOLIO</div>
+    <div class="navbar">
+      <a href="#1">
+        <h2>Home</h2>
+      </a>
+      <a href="#2">
+        <h2>Projects</h2>
+      </a>
+      <a href="#3">
+        <h2>Contact</h2>
+      </a>
+    </div>
+  </nav>-->
 
-  <div class="d-projects-page">
-    <div class="nav">
-      <div class="header-background"></div>
-      <div class="header-title">TINA’S PORTFOLIO</div>
-      <div class="navbar">
-        <a href="#1"><h2>Home</h2></a>
-        <a href="#2"><h2>Projects</h2></a>
-        <a href="#3"><h2>Contact</h2></a>
-      </div>
-    </div>
+  <p>Slideshow 1:</p>
   <div class="carousel">
-    <div class="slide-1">
-      <img src="images/Pacman.jpg" style="width:50%">
+    <div class="slider">
+        <div class="slide"><img src="images/Pacman.jpg"></div>
+        <div class="slide"><img src="images/Pacman2.jpg"></div>
+        <div class="slide"><img src="images/Pacman3.jpg"></div>
+      </div>
+      <a class="prev" onclick="moveSlide(-1, 0)">&#10094;</a>
+      <a class="next" onclick="moveSlide(1, 0)">&#10095;</a>
     </div>
-    <div class="slide-1">
-      <img src="images/Pacman.jpg" style="width:50%">
+    <br>
+    <div class="dots">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
     </div>
-    <div class="slide-1">
-      <img src="images/Pacman.jpg" style="width:50%">
-    </div>
+    <script src="scripts/script.js"></script>
   </div>
 </body>
 
