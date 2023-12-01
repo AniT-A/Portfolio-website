@@ -333,7 +333,7 @@ a {
 }
 
 .threedee-img {
-  position: absolute;
+  position: relative;
   width: 10vw;
   height: 10vh;
 }
@@ -361,7 +361,7 @@ a {
 }
 
 .code-title {
-  position: absolute; 
+  position: relative; 
   display: flex;
   width: 20vw;
   height: 20vh;
@@ -566,28 +566,66 @@ a {
       rgb(117.42, 52.06, 255) 100%);
 }
 /*
-  
+
+  3D-projects page
+
 */
-.carousel {
+.design {
   display: flex;
+  flex-direction: column;
+  gap: 3vw;
+}
+
+.design-title {
+  position: relative;
+  width: 30vw;
+  height: 10vh;
+  top: 15vh;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: top;
+  text-align: center;
+  font-family: "Anton", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: clamp(1rem, 3vw, 3rem);
+  letter-spacing: 0.2rem;
+  line-height: normal;
+}
+
+.carousel {
+  position: relative;
   align-items: center;
   justify-content: center;
+  top: auto;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70vw;
+  height: 60vh;
+  overflow: auto;
+  background-image: url(../images/rectangle-projects.svg);
+  object-fit: cover;
 }
 
 .slider {
-  display: block;
+  display: flex;
   position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden;
-  width: 100%;
-  max-width: 900px;
-  padding-top: 50%;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 70vw;
+  max-width: 70vw;
+  height: 30vh;
+  padding-top: 2vh;
+  object-fit: contain;
 }
 
 .slide {
   position: absolute;
-  display: flex;
   align-items: center;
   justify-content: center;
   font-size: 2em;
@@ -600,23 +638,36 @@ a {
   opacity: 0;
 }
 
-.slide.img {
+.slide-1, .slide-2, .slide-3, .slide-4, .slide-5 {
+  display: flex;
+  position: absolute;
   width: 100%;
-  display: none;
+  max-width:100%;
+  height: 100%;
+  max-height: 100%;
+  transition: 1s;
+  align-items: center;
+  justify-content: center;
+  object-fit: contain;
+}
+
+.slide-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .prev, .next {
   cursor: pointer;
   position: absolute;
-  top: 50%;
   width: auto;
-  padding: 2vw;
-  margin-top: -25px;
-  color: white;
+  padding: 1.5vw;
+  top: 15vh;
+  color: #8c58fc;
   font-weight: bold;
-  font-size: 1em;
+  font-size: 2em;
   transition: 0.6s ease;
-  border-radius: 50%;
+  border-radius: 100%;
   user-select: none;
 }
 
@@ -629,28 +680,23 @@ a {
 }
 
 .prev:hover, .next:hover {
-  background-color: #f1f1f1;
+  background-color: #8c58fc;
   color: black;
 }
 
 .dot {
-  display: block;
+  display: inline-block;
   position: relative;
   cursor: pointer;
   height: 15px;
   width: 15px;
-  top: 90%;
   margin: 0 2px;
-  background-color: #bbb;
+  top: auto;
+  background-color: #5d2dc4;
   border-radius: 50%;
   transition: background-color 0.6s ease;
 }
 
 .active, .dot:hover {
-  background-color: #717171;
-}
-
-.slide-1, .slide-2, .slide-3, .slide-4, .slide-5 {
-  display: none;
-
+  background-color: #8c58fc;
 }

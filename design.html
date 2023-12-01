@@ -16,40 +16,90 @@
 </head>
 
 <body>
-  <!--<nav>
+  <nav>
     <div class="header-background"></div>
     <div class="header-title">TINA’S PORTFOLIO</div>
     <div class="navbar">
-      <a href="#1">
+      <a href="index.html #1">
         <h2>Home</h2>
       </a>
-      <a href="#2">
+      <a href="index.html #2">
         <h2>Projects</h2>
       </a>
-      <a href="#3">
+      <a href="index.html #3">
         <h2>Contact</h2>
       </a>
     </div>
-  </nav>-->
+  </nav>
 
-  <p>Slideshow 1:</p>
-  <div class="carousel">
-    <div class="slider">
-        <div class="slide"><img src="images/Pacman.jpg"></div>
-        <div class="slide"><img src="images/Pacman2.jpg"></div>
-        <div class="slide"><img src="images/Pacman3.jpg"></div>
+  <section class="design">
+
+    <div class="design-title">3D-projects</div><br>
+
+    <div class="carousel">
+      <div class="slider">
+        <div class="slide-1"><img class="slide-img" src="images/Pacman.jpg"></div>
+        <div class="slide-1"><img class="slide-img" src="images/Pacman2.jpg"></div>
+        <div class="slide-1"><img class="slide-img" src="images/Pacman3.jpg"></div>
       </div>
       <a class="prev" onclick="moveSlide(-1, 0)">&#10094;</a>
       <a class="next" onclick="moveSlide(1, 0)">&#10095;</a>
+      <br>
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
     </div>
-    <br>
-    <div class="dots">
-      <span class="dot" onclick="currentSlide(1)"></span>
-      <span class="dot" onclick="currentSlide(2)"></span>
-      <span class="dot" onclick="currentSlide(3)"></span>
+
+    <div class="carousel">
+      <div class="slider">
+        <div class="slide-2"><img class="slide-img" src="images/Room.png"></div>
+        <div class="slide-2"><img class="slide-img" src="images/Room2.png"></div>
+        <div class="slide-2"><img class="slide-img" src="images/Room3.png"></div>
+      </div>
+      <a class="prev" onclick="moveSlide(-1, 1)">&#10094;</a>
+      <a class="next" onclick="moveSlide(1, 1)">&#10095;</a>
+      <br>
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
     </div>
+
+    <div class="carousel">
+      <div class="slider">
+        <div class="slide-3"><img class="slide-img" src="images/Library.png"></div>
+        <div class="slide-3"><img class="slide-img" src="images/Library2.png"></div>
+      </div>
+      <a class="prev" onclick="moveSlide(-1, 2)">&#10094;</a>
+      <a class="next" onclick="moveSlide(1, 2)">&#10095;</a>
+      <br>
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+      </div>
+    </div>
+
+    <div class="carousel">
+      <div class="slider">
+        <div class="slide-4"><img class="slide-img" src="images/Vase.gif"></div>
+        <div class="slide-4"><img class="slide-img" src="images/Vase0100.png"></div>
+        <div class="slide-4"><img class="slide-img" src="images/Vase0450.png"></div>
+      </div>
+      <a class="prev" onclick="moveSlide(-1, 3)">&#10094;</a>
+      <a class="next" onclick="moveSlide(1, 3)">&#10095;</a>
+      <br>
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+    </div>
+
     <script src="scripts/script.js"></script>
-  </div>
+  </section>
 </body>
 
 </html>
