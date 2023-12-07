@@ -1,14 +1,10 @@
 let slideIndex = [1, 1, 1, 1];
 let slideId = ["slide-1", "slide-2", "slide-3", "slide-4"];
+let dotId = ["dot-1", "dot-2", "dot-3", "dot-4"];
 showSlides(1, 0);
 showSlides(1, 1);
 showSlides(1, 2);
 showSlides(1, 3);
-currentSlide(1, 0);
-currentSlide(1, 1);
-currentSlide(1, 2);
-currentSlide(1, 3);
-
 
 function moveSlide(n, no) {
     showSlides(slideIndex[no] += n, no);
@@ -21,7 +17,7 @@ function currentSlide(n, no) {
 function showSlides(n, no) {
     let i;
     let slides = document.getElementsByClassName(slideId[no]);
-    let dots = document.getElementsByClassName("dot");
+    let dots = document.getElementsByClassName(dotId[no]);
 
     if (n > slides.length) { slideIndex[no] = 1; }
     if (n < 1) { slideIndex[no] = slides.length; }

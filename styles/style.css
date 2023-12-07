@@ -18,7 +18,7 @@ nav {
   height: 10vh;
   top: 0;
   left: 0;
-  z-index:100;
+  z-index: 100;
   /*background-color: transparent;*/
 }
 
@@ -29,10 +29,10 @@ nav {
   top: 0;
   filter: blur(40px);
   background: linear-gradient(180deg,
-      rgb(32.81, 13.75, 73.31) 0%,
-      rgb(54.94, 24.01, 120.06) 32.81%,
-      rgb(90.92, 39.74, 198.69) 65.08%,
-      rgb(117.42, 52.06, 255) 100%);
+      rgb(33, 13, 73) 0%,
+      rgb(54, 24, 124) 33%,
+      rgb(90, 40, 200) 66%,
+      rgb(120, 50, 255) 100%);
 }
 
 .header-title {
@@ -81,7 +81,7 @@ a {
 */
 
 .about {
-  position: absolute; 
+  position: absolute;
   display: flex;
   width: 100vw;
   height: 100vh;
@@ -111,7 +111,7 @@ a {
 .ellipse-a2 {
   position: absolute;
   width: 15vw;
-  height: 15vh;  
+  height: 15vh;
   max-width: 15vw;
   min-width: 5vw;
   max-height: 15vh;
@@ -361,7 +361,7 @@ a {
 }
 
 .code-title {
-  position: relative; 
+  position: relative;
   display: flex;
   width: 20vw;
   height: 20vh;
@@ -375,6 +375,7 @@ a {
   width: 15vw;
   height: 10vh;
 }
+
 /*
   
 */
@@ -493,6 +494,7 @@ a {
   background-image: url(../images/ring-1.png);
   background-size: 100% 100%;
 }
+
 /*
   
 */
@@ -503,7 +505,7 @@ a {
   height: 15vh;
   top: 100vh;
   right: -7vw;
-  align-items: center; 
+  align-items: center;
 }
 
 .bg-shape-1 {
@@ -558,13 +560,14 @@ a {
   height: 5vh;
   top: 295vh;
   transform: rotate(-180deg);
-  filter: blur(100px);
+  filter: blur(50px);
   background: linear-gradient(180deg,
-      rgb(32.81, 13.75, 73.31) 0%,
-      rgb(54.94, 24.01, 120.06) 32.81%,
-      rgb(90.92, 39.74, 198.69) 65.08%,
-      rgb(117.42, 52.06, 255) 100%);
+      rgb(33, 13, 73) 0%,
+      rgb(54, 24, 124) 33%,
+      rgb(90, 40, 200) 66%,
+      rgb(120, 50, 255) 100%);
 }
+
 /*
 
   3D-projects page
@@ -573,7 +576,15 @@ a {
 .design {
   display: flex;
   flex-direction: column;
-  gap: 3vw;
+  width: 100%;
+  height: auto;
+
+  background: linear-gradient(206deg,
+      rgba(149, 147, 255, 1) 0%,
+      rgba(149, 147, 255, 0.75) 15%,
+      rgba(149, 147, 255, 0.50) 50%,
+      rgba(149, 147, 255, 0.75) 85%,
+      rgba(149, 147, 255, 1) 100%);
 }
 
 .design-title {
@@ -638,11 +649,15 @@ a {
   opacity: 0;
 }
 
-.slide-1, .slide-2, .slide-3, .slide-4, .slide-5 {
+.slide-1,
+.slide-2,
+.slide-3,
+.slide-4,
+.slide-5 {
   display: flex;
   position: absolute;
   width: 100%;
-  max-width:100%;
+  max-width: 100%;
   height: 100%;
   max-height: 100%;
   transition: 1s;
@@ -657,7 +672,8 @@ a {
   object-fit: contain;
 }
 
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
   width: auto;
@@ -679,12 +695,16 @@ a {
   right: 0;
 }
 
-.prev:hover, .next:hover {
-  background-color: #8c58fc;
+.prev:hover,
+.next:hover {
+  background-color: #702ffc;
   color: black;
 }
 
-.dot {
+.dot-1,
+.dot-2,
+.dot-3,
+.dot-4 {
   display: inline-block;
   position: relative;
   cursor: pointer;
@@ -692,11 +712,12 @@ a {
   width: 15px;
   margin: 0 2px;
   top: auto;
-  background-color: #5d2dc4;
+  background-color: #9593FF;
   border-radius: 50%;
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
-  background-color: #8c58fc;
+.active,
+.dot:hover {
+  background-color: #702ffc;
 }
