@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   position: relative;
   background-color: #200d49;
@@ -12,6 +16,7 @@ body {
 }
 
 nav {
+  display: flex;
   position: fixed;
   overflow: hidden;
   width: 100vw;
@@ -36,32 +41,32 @@ nav {
 }
 
 .header-title {
+  display: flex;
   position: fixed;
-  width: 50vw;
-  height: 7vh;
-  top: 3vh;
+  align-items: center;
+  width: 33vw;
+  height: 10vh;
   left: 3vw;
   font-family: "Anton", Helvetica;
   font-weight: 400;
   color: #ffffff;
-  font-size: clamp(1rem, 3vw, 2.5rem);
+  font-size: clamp(1rem, 3vw, 2rem);
   letter-spacing: 0.2rem;
   line-height: normal;
 }
 
 .navbar {
-  position: fixed;
   display: flex;
+  position: fixed;
   width: 33vw;
-  height: 7vh;
-  top: 3vh;
+  height: 10vh;
   right: 3vw;
   align-items: center;
   justify-content: center;
   gap: 4vw;
 }
 
-a {
+.navbar a {
   font-family: "Anton", Helvetica;
   font-weight: 400;
   color: #ffffff;
@@ -69,6 +74,7 @@ a {
   text-align: center;
   letter-spacing: 0.1rem;
   line-height: normal;
+  text-decoration: none;
 }
 
 .navbar-items {
@@ -77,7 +83,7 @@ a {
 }
 
 /*
-
+  ************************* LANDING PAGE *************************
 */
 
 .about {
@@ -89,7 +95,8 @@ a {
 }
 
 .about-left {
-  position: absolute;
+  position: relative;
+  display: flex;
   width: 30vw;
   height: 80vh;
   top: 20vh;
@@ -138,6 +145,7 @@ a {
 
 .about-right {
   position: absolute;
+  display: flex;
   width: 70vw;
   height: 80vh;
   top: 20vh;
@@ -202,8 +210,9 @@ a {
 }
 
 /*
-
+  ************************* PROJECTS *************************
 */
+
 .projects {
   position: absolute;
   display: flex;
@@ -219,7 +228,6 @@ a {
   top: 10vh;
   margin-left: auto;
   margin-right: auto;
-  vertical-align: center;
   text-align: center;
   font-family: "Anton", Helvetica;
   font-weight: 400;
@@ -324,7 +332,7 @@ a {
 }
 
 .threedee-title {
-  position: absolute;
+  position: relative;
   display: flex;
   width: 20vw;
   height: 20vh;
@@ -365,20 +373,20 @@ a {
   display: flex;
   width: 20vw;
   height: 20vh;
-  vertical-align: center;
   align-items: center;
   justify-content: center;
 }
 
 .code-img {
-  position: absolute;
+  position: relative;
   width: 15vw;
   height: 10vh;
 }
 
 /*
-  
+  ************************* CONTACT *************************
 */
+
 .contact {
   position: absolute;
   display: flex;
@@ -496,8 +504,9 @@ a {
 }
 
 /*
-  
+  ************************* SIDE ELEMENTS *************************
 */
+
 .bg-shape-wrapper1 {
   position: absolute;
   display: flex;
@@ -558,7 +567,8 @@ a {
   display: flex;
   width: 100vw;
   height: 5vh;
-  top: 295vh;
+  top: auto;
+  bottom: 0;
   transform: rotate(-180deg);
   filter: blur(50px);
   background: linear-gradient(180deg,
@@ -569,16 +579,18 @@ a {
 }
 
 /*
-
-  3D-projects page
-
+  ************************* 3D-PROJECTS PAGE *************************
 */
+
 .design {
   display: flex;
   flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: auto;
-
+  top: 10vh;
   background: linear-gradient(206deg,
       rgba(149, 147, 255, 1) 0%,
       rgba(149, 147, 255, 0.75) 15%,
@@ -588,15 +600,16 @@ a {
 }
 
 .design-title {
+  display: flex;
   position: relative;
   width: 30vw;
-  height: 10vh;
-  top: 15vh;
-  margin-top: 2vw;
-  margin-bottom: 2vw;
-  margin-left: auto;
-  margin-right: auto;
-  vertical-align: top;
+  height: 20vh;
+  top: auto;
+  margin: auto;
+  padding: auto;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
   text-align: center;
   font-family: "Anton", Helvetica;
   font-weight: 400;
@@ -604,6 +617,15 @@ a {
   font-size: clamp(1rem, 3vw, 3rem);
   letter-spacing: 0.2rem;
   line-height: normal;
+}
+
+.carousels {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: auto;
+  height: auto;
+  top: auto;
 }
 
 .carousel {
