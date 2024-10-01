@@ -1,30 +1,29 @@
-html {
-  scroll-behavior: smooth;
-}
 
 body {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
   background-color: #200d49;
   overflow-x: hidden;
   overflow-y: scroll;
-  /*display: flex;
-  flex-direction: row;
-  flex: 0 0 auto;
-  justify-content: center;
-  width: 100vw;
-  height: 300vh;*/
+  line-height: normal;
+  /*flex: 0 0 auto;*/
 }
 
 nav {
-  display: flex;
   position: fixed;
-  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: baseline;
+  justify-content: space-between;
   width: 100vw;
   height: 10vh;
   top: 0;
-  left: 0;
   z-index: 100;
-  /*background-color: transparent;*/
 }
 
 .header-background {
@@ -41,11 +40,10 @@ nav {
 }
 
 .header-title {
+  position: relative;
   display: flex;
-  position: fixed;
-  align-items: center;
-  width: 33vw;
-  height: 10vh;
+  width: auto;
+  height: auto;
   left: 3vw;
   font-family: "Anton", Helvetica;
   font-weight: 400;
@@ -56,13 +54,11 @@ nav {
 }
 
 .navbar {
+  position: relative;
   display: flex;
-  position: fixed;
-  width: 33vw;
-  height: 10vh;
+  width: auto;
+  height: auto;
   right: 3vw;
-  align-items: center;
-  justify-content: center;
   gap: 4vw;
 }
 
@@ -70,49 +66,60 @@ nav {
   font-family: "Anton", Helvetica;
   font-weight: 400;
   color: #ffffff;
-  font-size: clamp(1rem, 2vw, 2rem);
+  font-size: clamp(0.7rem, 2vw, 2rem);
   text-align: center;
   letter-spacing: 0.1rem;
   line-height: normal;
   text-decoration: none;
 }
 
-.navbar-items {
+section {
   position: relative;
-  flex: 0 0 auto;
+  display: flex;
+  width: 100vw;
+  height: 90vh;
 }
 
 /*
   ************************* LANDING PAGE *************************
 */
 
-.about {
+/*
+  ************************* ABOUT *************************
+*/
+
+.ellipse-a1 {
   position: absolute;
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
+  width: 20vw;
+  height: 20vh;
+  max-width: 20vw;
+  min-width: 10vw;
+  max-height: 20vh;
+  min-height: 10vh;
+  top: 10vh;
+  right: -5vw;
+  background-image: url(../images/ellipse-a1.svg);
+  background-size: 100% 100%;
+  z-index: 1;
 }
 
 .about-left {
   position: relative;
   display: flex;
   width: 30vw;
-  height: 80vh;
-  top: 20vh;
-  left: 0;
+  height: 90vh;
 }
 
 .portrait {
   position: absolute;
   width: 10vw;
   height: 20vh;
-  max-width: 8vw;
+  max-width: 10vw;
   min-width: 5vw;
   max-height: 20vh;
-  min-height: 15vh;
-  top: 25vh;
-  left: 12vw;
+  min-height: 10vh;
+  top: 35vh;
+  left: 10vw;
 }
 
 .ellipse-a2 {
@@ -123,7 +130,7 @@ nav {
   min-width: 5vw;
   max-height: 15vh;
   min-height: 5vh;
-  top: 15vh;
+  top: 27vh;
   left: 15vw;
   background-image: url(../images/ellipse-a2.svg);
   background-size: 100% 100%;
@@ -132,81 +139,70 @@ nav {
 .ellipse-a3 {
   position: absolute;
   width: 10vw;
-  height: 10vh;
+  height: 10vw;
   max-width: 10vw;
   min-width: 5vw;
   max-height: 10vh;
   min-height: 5vh;
-  top: 48vh;
-  left: 5vw;
+  top: 60vh;
+  left: 3vw;
   background-image: url(../images/ellipse-a3.svg);
   background-size: 100% 100%;
 }
 
 .about-right {
-  position: absolute;
+  position: relative;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 70vw;
-  height: 80vh;
-  top: 20vh;
-  right: 0;
+  height: 90vh;
 }
 
 .about-me {
-  position: absolute;
-  width: 70vw;
-  height: 70vh;
-  max-width: 70vw;
-  min-width: 70vw;
-  max-height: 80vh;
-  min-height: 65vh;
-  top: 0;
-  left: 0;
-  background-image: url(../images/about-tile.svg);
-  background-size: 100% 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+  height: auto;
 }
 
-.about-title {
+.about-bg-1 {
   position: absolute;
-  width: 20vh;
-  top: 8vh;
-  left: 10vw;
-  font-family: "Anton", Helvetica;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: clamp(0.5rem, 2vw, 2rem);
-  letter-spacing: 0.2rem;
-  line-height: normal;
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 65vh;
+/*  max-width: 70vw;
+  min-width: 70vw;
+  min-height: 65vh;*/
+  /* clip-path: rect(0, 60vw, 60vh, 0); */
 }
 
 .about-text {
   position: relative;
-  width: 45vw;
-  height: 30vh;
-  top: 15vh;
-  left: 10vw;
-  right: 10vw;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: fit-content;
   font-family: "Noto Sans", Helvetica;
   font-weight: 400;
   color: #ffffff;
-  font-size: clamp(0.5rem, 1vw, 2rem);
-  letter-spacing: 0.1rem;
+  font-size: clamp(0.5rem, 1.2vw, 2rem);
+  letter-spacing: 1px;
   line-height: 1.5;
   text-align: justify;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
-.ellipse-a1 {
-  position: absolute;
-  width: 20vw;
-  height: 20vh;
-  max-width: 20vw;
-  min-width: 10vw;
-  max-height: 20vh;
-  min-height: 10vh;
-  top: 12vh;
-  right: -5vw;
-  background-image: url(../images/ellipse-a1.svg);
-  background-size: 100% 100%;
+.about-text h2{
+  width: auto;
+  font-family: "Anton", Helvetica;
+  font-size: clamp(0.7rem, 3vw, 3rem);
+  letter-spacing: 3px;
+  line-height: 2;
 }
 
 /*
@@ -214,116 +210,46 @@ nav {
 */
 
 .projects {
-  position: absolute;
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  top: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .projects-title {
   position: relative;
-  width: 15vw;
+  display: flex;
+  width: auto;
   height: 10vh;
-  top: 10vh;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 10vh auto;
   text-align: center;
   font-family: "Anton", Helvetica;
   font-weight: 400;
   color: #ffffff;
   font-size: clamp(1rem, 3vw, 3rem);
-  letter-spacing: 0.2rem;
-  line-height: normal;
+  letter-spacing: 3px;
 }
 
-.tube-1 {
-  position: absolute;
-  width: 15vw;
-  height: 20vh;
-  max-width: 15vw;
-  min-width: 10vw;
-  max-height: 20vh;
-  min-height: 10vh;
-  top: -3vh;
-  left: 1vw;
-  background-image: url(../images/tube-1.png);
-  background-size: 100% 100%;
+.projects-boxes {
+  position: relative;
+  display: flex;
+  width: auto;
+  height: auto;
+  justify-content: center;
 }
 
-.tube-2 {
-  position: absolute;
-  width: 10vw;
-  height: 15vh;
-  top: 27vh;
-  left: 5vw;
-  background-image: url(../images/tube-2.png);
-  background-size: 100% 100%;
+.projects-left, .projects-right {
+  position: relative;
+  display: flex;
+  width: 50vw;
+  height: 50vh;
+  justify-content: center;
 }
 
-.cube-1 {
-  position: absolute;
-  width: 15vw;
-  height: 15vh;
-  max-width: 15vw;
-  min-width: 10vw;
-  max-height: 15vh;
-  min-height: 10vh;
-  top: 11vh;
-  right: 6vw;
-  background-image: url(../images/cube-1.png);
-  background-size: 100% 100%;
-}
-
-.pyramid {
-  position: absolute;
-  width: 10vw;
-  height: 15vh;
-  top: 40vh;
-  right: 2vw;
-  background-image: url(../images/pyramid-1.png);
-  background-size: 100% 100%;
-}
-
-.cone {
-  position: absolute;
-  width: 10vw;
-  height: 12vh;
-  top: 70vh;
-  right: 30vw;
-  background-image: url(../images/cone-1.png);
-  background-size: 100% 100%;
-}
-
-.cube-2 {
-  position: absolute;
-  width: 15vw;
-  height: 13vh;
-  max-width: 15vw;
-  min-width: 8vw;
-  max-height: 13vh;
-  min-height: 6vh;
-  top: 80vh;
-  left: 15vw;
-  background-image: url(../images/cube-2.png);
-  background-size: 100% 100%;
-}
-
-.projects-left {
-  position: absolute;
-  width: 45vw;
-  height: 45vh;
-  top: 25vh;
-  left: 5vw;
-}
-
-.threedee {
+.threedee, .code {
   position: absolute;
   display: flex;
-  width: 40vw;
-  height: 45vh;
-  top: 0;
-  left: 0;
+  width: 75%;
+  height: 75%;
   align-items: center;
   justify-content: center;
   background: linear-gradient(180deg,
@@ -331,7 +257,7 @@ nav {
       rgba(38, 8, 103, 0) 100%);
 }
 
-.threedee-title {
+.threedee-title, .code-title {
   position: relative;
   display: flex;
   width: 20vw;
@@ -346,41 +272,68 @@ nav {
   height: 10vh;
 }
 
-.projects-right {
-  position: absolute;
-  width: 45vw;
-  height: 45vh;
-  top: 25vh;
-  right: 5vw;
-}
-
-.code {
-  position: absolute;
-  display: flex;
-  width: 40vw;
-  height: 45vh;
-  top: 0;
-  right: 0;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(180deg,
-      rgb(38, 8, 103) 0%,
-      rgba(38, 8, 103, 0) 100%);
-}
-
-.code-title {
-  position: relative;
-  display: flex;
-  width: 20vw;
-  height: 20vh;
-  align-items: center;
-  justify-content: center;
-}
-
 .code-img {
   position: relative;
   width: 15vw;
   height: 10vh;
+}
+
+.tube-1 {
+  position: absolute;
+  width: 15vw;
+  height: 20vh;
+  max-width: 15vw;
+  min-width: 10vw;
+  max-height: 20vh;
+  min-height: 10vh;
+  top: 10vh;
+  left: 1vw;
+  background-image: url(../images/tube-1.png);
+  background-size: 100% 100%;
+}
+
+.tube-2 {
+  position: absolute;
+  width: 10vw;
+  height: 15vh;
+  top: 30vh;
+  left: 5vw;
+  background-image: url(../images/tube-2.png);
+  background-size: 100% 100%;
+}
+
+.cube-1 {
+  position: absolute;
+  width: 15vw;
+  height: 15vh;
+  max-width: 15vw;
+  min-width: 10vw;
+  max-height: 15vh;
+  min-height: 10vh;
+  top: 20vh;
+  right: 10vw;
+  background-image: url(../images/cube-1.png);
+  background-size: 100% 100%;
+}
+
+.pyramid {
+  position: absolute;
+  width: 10vw;
+  height: 15vh;
+  top: 55vh;
+  right: 2vw;
+  background-image: url(../images/pyramid-1.png);
+  background-size: 100% 100%;
+}
+
+.cone {
+  position: absolute;
+  width: 10vw;
+  height: 12vh;
+  top: 75vh;
+  right: 35vw;
+  background-image: url(../images/cone-1.png);
+  background-size: 100% 100%;
 }
 
 /*
@@ -388,29 +341,39 @@ nav {
 */
 
 .contact {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cube-2 {
   position: absolute;
-  display: flex;
-  width: 100vw;
-  height: 95vh;
-  top: 200vh;
+  width: 13vw;
+  height: 13vh;
+  max-width: 15vw;
+  min-width: 8vw;
+  max-height: 13vh;
+  min-height: 6vh;
+  top: 15vh;
+  left: 15vw;
+  background-image: url(../images/cube-2.png);
+  background-size: 100% 100%;
 }
 
 .contact-tile {
   position: relative;
-  margin-left: 30vw;
-  margin-right: auto;
-  align-items: center;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
   width: 30vw;
   height: 30vh;
-  top: 10vh;
+  justify-content: space-around;
 }
 
 .contact-title {
-  position: absolute;
+  position: relative;
+  display: flex;
   width: 30vw;
-  height: 10vh;
-  top: 5vh;
+  height: auto;
   align-items: center;
   justify-content: center;
   font-family: "Anton", Helvetica;
@@ -418,61 +381,35 @@ nav {
   color: #ffffff;
   font-size: clamp(1rem, 3vw, 3rem);
   text-align: center;
-  letter-spacing: 0.2rem;
+  letter-spacing: 3px;
   line-height: normal;
 }
 
 .icons {
-  position: absolute;
+  position: relative;
   display: flex;
   width: 30vw;
   height: 10vh;
-  top: 20vh;
   gap: 3vw;
-  margin-left: auto;
-  margin-right: auto;
   align-items: center;
   justify-content: center;
 }
 
-.github {
+.github, .linkedin, .mail {
   position: relative;
   width: 7vw;
   height: 7vh;
-  top: 0;
-}
-
-.linkedin {
-  position: relative;
-  width: 7vw;
-  height: 7vh;
-}
-
-.mail {
-  position: relative;
-  width: 7vw;
-  height: 7vh;
-}
-
-.ellipse-wrapper {
-  position: absolute;
-  width: 20vw;
-  height: 20vh;
-  top: 40vh;
-  left: 20vw;
 }
 
 .ellipse-c1 {
   position: absolute;
   width: 20vw;
   height: 20vh;
-  top: 0;
-  left: 0;
-  /*background-color: #391a61;
-  border-radius: 69.5px;
-  filter: blur(50px);*/
+  top: 50vh;
+  left: 20vw; 
   background-image: url(../images/ellipse-c1.svg);
   background-size: 100% 100%;
+  z-index: -1;
 }
 
 .sphere {
@@ -483,83 +420,24 @@ nav {
   min-width: 5vw;
   max-height: 15vh;
   min-height: 5vh;
-  top: 0;
-  right: 12vw;
+  top: 20vh;
+  right: 15vw;
   background-image: url(../images/sphere-1.png);
   background-size: 100% 100%;
 }
 
 .ring {
   position: absolute;
-  width: 15vw;
+  width: 12vw;
   height: 10vh;
-  max-width: 12vw;
+  max-width: 15vw;
   min-width: 7vw;
-  max-height: 10vh;
+  max-height: 15vh;
   min-height: 5vh;
-  top: 30vh;
-  right: 5vw;
+  top: 40vh;
+  right: 8vw;
   background-image: url(../images/ring-1.png);
   background-size: 100% 100%;
-}
-
-/*
-  ************************* SIDE ELEMENTS *************************
-*/
-
-.bg-shape-wrapper1 {
-  position: absolute;
-  display: flex;
-  width: 15vw;
-  height: 15vh;
-  top: 100vh;
-  right: -7vw;
-  align-items: center;
-}
-
-.bg-shape-1 {
-  position: relative;
-  width: 15vw;
-  height: 15vh;
-  background-color: #30a6cc;
-  filter: blur(10vw);
-}
-
-.bg-shape-wrapper2 {
-  position: absolute;
-  display: flex;
-  width: 15vw;
-  height: 15vh;
-  top: 190vh;
-  left: -7vw;
-  align-items: center;
-}
-
-.bg-shape-2 {
-  position: relative;
-  width: 20vw;
-  height: 20vh;
-  background-color: #317762;
-  filter: blur(10vw);
-}
-
-.bg-shape-wrapper3 {
-  position: absolute;
-  display: flex;
-  width: 15vw;
-  height: 15vh;
-  top: 210vh;
-  right: -7vw;
-  align-items: center;
-}
-
-.bg-shape-3 {
-  position: relative;
-  width: 20vw;
-  height: 20vh;
-  background-color: #4c0e4a;
-  transform: rotate(45deg);
-  filter: blur(10vw);
 }
 
 .footer {
@@ -567,7 +445,6 @@ nav {
   display: flex;
   width: 100vw;
   height: 5vh;
-  top: auto;
   bottom: 0;
   transform: rotate(-180deg);
   filter: blur(50px);
@@ -579,13 +456,203 @@ nav {
 }
 
 /*
+  ************************* SIDE ELEMENTS *************************
+*/
+
+.bg-shape-1 {
+  position: absolute;
+  width: 15vw;
+  height: 15vh;
+  top: 83vh;
+  right: -7vw;
+  background-color: #30a6cc;
+  filter: blur(8vw);
+}
+
+.bg-shape-2 {
+  position: absolute;
+  width: 15vw;
+  height: 15vh;
+  top: 173vh;
+  left: -7vw;
+  background-color: #317762;
+  filter: blur(8vw);
+}
+
+.bg-shape-3 {
+  position: absolute;
+  display: flex;
+  width: 15vw;
+  height: 7vh;
+  top: 213vh;
+  right: 0vw;
+  align-items: center;
+  background-color: #4c0e4a;
+  transform: rotate(45deg);
+  filter: blur(8vw);
+}
+
+/*
+  ************************* VIEWPORT <600px *************************
+*/
+
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: normal;
+    justify-content: space-around;
+  }
+  .header-title {
+    position: fixed;
+  }
+  .navbar {
+    justify-content: flex-end;
+  }
+
+/*
+  ************************* ABOUT *************************
+*/
+
+  .ellipse-a1 {
+    top: 7vh;
+  }
+
+  .portrait {
+    position: absolute;
+    left: 7vw;
+    width: 15vw;
+    height: auto;
+    max-width: 20vw;
+    min-width: 10vw;
+    max-height: 15vh;
+    min-height: 10vh;
+  }
+
+  .ellipse-a2 {
+    top: 25vh;
+  }
+
+  .ellipse-a3 {
+    top: 50vh;
+  }
+
+  .about-bg-1 {
+    transform: rotate(90deg);
+    width: 100%;
+    height: auto;
+    visibility: hidden;
+    /* clip: rect(0, 100vw, 100vh, 0); */
+  }
+
+  .about-text {
+    width: 80%;
+  }
+
+/*
+  ************************* PROJECTS *************************
+*/
+
+  .projects {
+    justify-content: center;
+    gap: 10vh;
+  }
+
+  .projects-title {
+    height: auto;
+    margin: 0;
+  }
+
+  .projects-left,
+  .projects-right {
+    height: 20vh;
+  }
+
+  .threedee,
+  .code {
+    width: 40vw;
+    height: 20vh;
+  }
+
+  .threedee-title,
+  .code-title {
+    width: auto;
+    height: auto;
+  }
+
+  .threedee-img {
+    width: 10vw;
+    height: 7vh;
+  }
+
+  .code-img {
+    width: 17vw;
+    height: 7vh;
+  }
+
+  .tube-1 {
+    height: 15vh;
+    top: 7vh;
+    left: 3vw;
+  }
+
+  .tube-2 {
+    width: 15vw;
+    height: 10vh;
+    top: 18vh;
+    left: 12vw;
+  }
+
+  .cube-1 {
+    width: 25vw;
+    height: 12vh;
+    max-width: 25vw;
+    top: 20vh;
+    right: 5vw;
+  }
+
+  .pyramid {
+    width: 20vw;
+    height: 15vh;
+    top: 68vh;
+    right: 15vw;
+  }
+
+  .cone {
+    width: 20vw;
+    height: 10vh;
+    top: 85vh;
+    right: 40vw;
+  }
+
+/*
+  ************************* CONTACT *************************
+*/
+
+  .sphere {
+    width: 20vw;
+    max-width: 20vw;
+  }
+
+  .ring {
+    width: 15vw;
+    height: 12vh;
+  }
+
+  .bg-shape-1, .bg-shape-2, .bg-shape-3 {
+    filter: blur(10vw);
+  }
+
+}
+
+/*
   ************************* 3D-PROJECTS PAGE *************************
 */
 
 .design {
+  position: relative;
   display: flex;
   flex-direction: column;
-  position: relative;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -600,8 +667,8 @@ nav {
 }
 
 .design-title {
-  display: flex;
   position: relative;
+  display: flex;
   width: 30vw;
   height: 20vh;
   top: auto;
@@ -620,9 +687,9 @@ nav {
 }
 
 .carousels {
+  position: relative;
   display: flex;
   flex-direction: column;
-  position: relative;
   width: auto;
   height: auto;
   top: auto;
@@ -645,8 +712,8 @@ nav {
 }
 
 .slider {
-  display: flex;
   position: relative;
+  display: flex;
   align-items: center;
   justify-content: center;
   margin: auto;
@@ -657,27 +724,13 @@ nav {
   object-fit: contain;
 }
 
-.slide {
-  position: absolute;
-  align-items: center;
-  justify-content: center;
-  font-size: 2em;
-  font-weight: bold;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: 1s;
-  opacity: 0;
-}
-
 .slide-1,
 .slide-2,
 .slide-3,
 .slide-4,
 .slide-5 {
-  display: flex;
   position: absolute;
+  display: flex;
   width: 100%;
   max-width: 100%;
   height: 100%;
@@ -696,8 +749,8 @@ nav {
 
 .prev,
 .next {
-  cursor: pointer;
   position: absolute;
+  cursor: pointer;
   width: auto;
   padding: 1.5vw;
   top: 15vh;
@@ -706,7 +759,6 @@ nav {
   font-size: 2em;
   transition: 0.6s ease;
   border-radius: 100%;
-  user-select: none;
 }
 
 .prev {
@@ -723,12 +775,16 @@ nav {
   color: black;
 }
 
+.dots {
+  text-align: center;
+}
+
 .dot-1,
 .dot-2,
 .dot-3,
 .dot-4 {
-  display: inline-block;
   position: relative;
+  display: inline-block;
   cursor: pointer;
   height: 15px;
   width: 15px;

@@ -4,13 +4,19 @@
 @import url(https://fonts.googleapis.com/css2?family=Anton&display=swap);
 
 * {
-  -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
   padding: 0; 
   margin: 0;
+  border-image-width: 0;
+  scroll-behavior: smooth;
+}
+
+*::before, *::after {
+  margin: 0; 
+  padding: 0;
 }
 
 button:focus-visible {
-  outline: 2px solid #c3d1e2;
   outline: -webkit-focus-ring-color auto 5px;
+  outline: 2px solid #c3d1e2;
 }
