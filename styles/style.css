@@ -32,7 +32,7 @@ nav {
   height: 10vh;
   top: 0;
   filter: blur(40px);
-  background: linear-gradient(180deg,
+  background: linear-gradient(90deg,
       rgb(33, 13, 73) 0%,
       rgb(54, 24, 124) 33%,
       rgb(90, 40, 200) 66%,
@@ -650,27 +650,19 @@ section {
 */
 
 .design {
-  position: relative;
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
   height: auto;
-  top: 10vh;
-  background: linear-gradient(206deg,
-      rgba(149, 147, 255, 1) 0%,
-      rgba(149, 147, 255, 0.75) 15%,
-      rgba(149, 147, 255, 0.50) 50%,
-      rgba(149, 147, 255, 0.75) 85%,
-      rgba(149, 147, 255, 1) 100%);
+  top: 15vh;
+  background: linear-gradient(45deg, rgba(66,27,148,1) 0%, rgba(49,20,111,1) 10%, rgba(29,12,65,1) 25%, rgba(29,12,65,1) 50%, rgba(29,12,65,1) 75%, rgba(49,20,111,1) 90%, rgba(66,27,148,1) 100%);
 }
 
 .design-title {
   position: relative;
   display: flex;
   width: 30vw;
-  height: 20vh;
+  height: 10vh;
   top: auto;
   margin: auto;
   padding: auto;
@@ -705,7 +697,7 @@ section {
   margin-left: auto;
   margin-right: auto;
   width: 70vw;
-  height: 60vh;
+  height: 70vh;
   overflow: auto;
   background-image: url(../images/rectangle-projects.svg);
   object-fit: cover;
@@ -719,7 +711,7 @@ section {
   margin: auto;
   width: 70vw;
   max-width: 70vw;
-  height: 30vh;
+  height: 40vh;
   padding-top: 2vh;
   object-fit: contain;
 }
@@ -798,4 +790,30 @@ section {
 .active,
 .dot:hover {
   background-color: #702ffc;
+}
+
+.code-text {
+  display: flex;
+  flex-direction: column;
+  margin: 5vh 5vw;
+  height: fit-content;
+  font-family: "Noto Sans", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: clamp(0.5rem, 1.2vw, 2rem);
+  letter-spacing: 1px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.code-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
+}
+
+.code-icons-img {
+  width: 5vw;
+  height: 5vh;
 }
