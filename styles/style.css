@@ -73,6 +73,23 @@ nav {
   text-decoration: none;
 }
 
+.projects-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.projects-dropdown {
+  position: absolute;
+  display: none;
+  width: 100%;
+  z-index: 1;
+  text-indent: 10px;
+}
+
+.projects-menu:hover .projects-dropdown {
+  display: block;
+}
+
 section {
   position: relative;
   display: flex;
@@ -791,6 +808,10 @@ section {
 .dot:hover {
   background-color: #702ffc;
 }
+
+/*
+  ************************* CODE-PROJECTS PAGE *************************
+*/
 
 .code-text {
   display: flex;
