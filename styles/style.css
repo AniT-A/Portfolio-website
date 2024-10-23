@@ -190,6 +190,7 @@ section {
   display: block;
   width: 100%;
   height: auto;
+  object-fit: cover;
   max-height: 65vh;
 /*  max-width: 70vw;
   min-width: 70vw;
@@ -203,12 +204,13 @@ section {
   flex-direction: column;
   width: 70%;
   height: fit-content;
+  margin-top: 1rem;
   font-family: "Noto Sans", Helvetica;
   font-weight: 400;
   color: #ffffff;
-  font-size: clamp(0.5rem, 1.2vw, 2rem);
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
   letter-spacing: 1px;
-  line-height: 1.5;
+  line-height: 2;
   text-align: justify;
   -webkit-user-select: none;
   user-select: none;
@@ -217,11 +219,24 @@ section {
 .about-text h2{
   width: auto;
   font-family: "Anton", Helvetica;
-  font-size: clamp(0.7rem, 3vw, 3rem);
+  font-size: clamp(1rem, 3vw, 2.5rem);
   letter-spacing: 3px;
   line-height: 2;
 }
 
+.tech-icons-tile{
+  display: flex;
+  width: auto;
+  height: auto;
+  margin-top: 1rem;
+  gap: 1vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.tech-icon {
+  width: clamp(2rem, 3vw, 3rem);
+}
 /*
   ************************* PROJECTS *************************
 */
@@ -402,7 +417,7 @@ section {
   line-height: normal;
 }
 
-.icons {
+.contact-icons {
   position: relative;
   display: flex;
   width: 30vw;
@@ -560,6 +575,10 @@ section {
     height: auto;
     visibility: hidden;
     /* clip: rect(0, 100vw, 100vh, 0); */
+  }
+
+  .tech-icon {
+    width: 2rem;
   }
 
   .about-text {
