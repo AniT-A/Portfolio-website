@@ -231,7 +231,7 @@ section {
   margin-top: 1rem;
   gap: 1vw;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
 }
 
 .tech-icon {
