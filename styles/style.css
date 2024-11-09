@@ -109,10 +109,6 @@ section {
   position: absolute;
   width: 20vw;
   height: 20vh;
-  max-width: 20vw;
-  min-width: 10vw;
-  max-height: 20vh;
-  min-height: 10vh;
   top: 10vh;
   right: -5vw;
   background-image: url(../images/ellipse-a1.svg);
@@ -128,15 +124,12 @@ section {
 }
 
 .portrait {
-  position: absolute;
+  position: relative;
   width: 10vw;
-  height: 20vh;
-  max-width: 10vw;
-  min-width: 5vw;
-  max-height: 20vh;
-  min-height: 10vh;
-  top: 35vh;
-  left: 10vw;
+  height: auto;
+  max-height: 25vh;
+  aspect-ratio: 1/2;
+  margin: auto;
 }
 
 .ellipse-a2 {
@@ -147,7 +140,7 @@ section {
   min-width: 5vw;
   max-height: 15vh;
   min-height: 5vh;
-  top: 27vh;
+  top: 25vh;
   left: 15vw;
   background-image: url(../images/ellipse-a2.svg);
   background-size: 100% 100%;
@@ -161,7 +154,7 @@ section {
   min-width: 5vw;
   max-height: 10vh;
   min-height: 5vh;
-  top: 60vh;
+  bottom: 20vh;
   left: 3vw;
   background-image: url(../images/ellipse-a3.svg);
   background-size: 100% 100%;
@@ -171,7 +164,7 @@ section {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   width: 70vw;
   height: 90vh;
 }
@@ -181,8 +174,9 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: auto;
+  width: 65vw;
   height: auto;
+  margin-top: 10vh;
 }
 
 .about-bg-1 {
@@ -190,36 +184,36 @@ section {
   display: block;
   width: 100%;
   height: auto;
+  min-height: 50vh;
+  max-height: 80vh;
   object-fit: cover;
-  max-height: 65vh;
-/*  max-width: 70vw;
-  min-width: 70vw;
-  min-height: 65vh;*/
-  /* clip-path: rect(0, 60vw, 60vh, 0); */
+  margin-top: 5vh;
 }
 
 .about-text {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 80%;
   height: fit-content;
   margin-top: 1rem;
   font-family: "Noto Sans", Helvetica;
   font-weight: 400;
   color: #ffffff;
-  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  font-size: clamp(0.5rem, 1.5vw, 1.5rem);
+  font-kerning: auto;
   letter-spacing: 1px;
-  line-height: 2;
+  line-height: 1.5;
   text-align: justify;
   -webkit-user-select: none;
   user-select: none;
+  margin-top: 10vh;
 }
 
 .about-text h2{
   width: auto;
   font-family: "Anton", Helvetica;
-  font-size: clamp(1rem, 3vw, 2.5rem);
+  font-size: clamp(1rem, 2vw, 2.5rem);
   letter-spacing: 3px;
   line-height: 2;
 }
@@ -237,6 +231,7 @@ section {
 .tech-icon {
   width: clamp(2rem, 3vw, 3rem);
 }
+
 /*
   ************************* PROJECTS *************************
 */
@@ -513,14 +508,11 @@ section {
 
 .bg-shape-3 {
   position: absolute;
-  display: flex;
   width: 15vw;
-  height: 7vh;
-  top: 213vh;
+  height: 15vh;
+  top: 210vh;
   right: 0vw;
-  align-items: center;
   background-color: #4c0e4a;
-  transform: rotate(45deg);
   filter: blur(8vw);
 }
 
@@ -547,16 +539,13 @@ section {
 */
 
   .ellipse-a1 {
-    top: 7vh;
+    top: 5vh;
+    right: 0;
   }
 
   .portrait {
-    position: absolute;
-    left: 7vw;
     width: 15vw;
     height: auto;
-    max-width: 20vw;
-    min-width: 10vw;
     max-height: 15vh;
     min-height: 10vh;
   }
@@ -566,15 +555,15 @@ section {
   }
 
   .ellipse-a3 {
-    top: 50vh;
+    top: 55vh;
   }
 
   .about-bg-1 {
-    transform: rotate(90deg);
-    width: 100%;
-    height: auto;
     visibility: hidden;
-    /* clip: rect(0, 100vw, 100vh, 0); */
+  }
+
+  .tech-icons-tile {
+    flex-wrap: wrap;
   }
 
   .tech-icon {
@@ -582,7 +571,7 @@ section {
   }
 
   .about-text {
-    width: 80%;
+    width: 85%;
   }
 
 /*
@@ -676,7 +665,17 @@ section {
   }
 
   .bg-shape-1, .bg-shape-2, .bg-shape-3 {
+    width: 12vw;
+    height: 12vh;
     filter: blur(10vw);
+  }
+
+  .bg-shape-1 {
+    right: 0;
+  }
+
+  .bg-shape-2 {
+    left: 0;
   }
 
 }
