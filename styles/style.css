@@ -242,7 +242,7 @@ section {
   justify-content: flex-start;
 }
 
-.projects-title h2{
+.projects-title {
   position: relative;
   display: flex;
   width: auto;
@@ -616,38 +616,39 @@ section {
   }
 
   .tube-1 {
+    width: 20vw;
     height: 15vh;
-    top: 7vh;
-    left: 3vw;
+    top: 3vh;
+    left: 5vw;
   }
 
   .tube-2 {
-    width: 15vw;
-    height: 10vh;
-    top: 18vh;
-    left: 12vw;
+    width: 13vw;
+    height: 8vh;
+    top: 15vh;
+    left: 20vw;
   }
 
   .cube-1 {
-    width: 25vw;
-    height: 12vh;
+    width: 20vw;
+    height: 10vh;
     max-width: 25vw;
-    top: 20vh;
+    top: 25vh;
     right: 5vw;
   }
 
   .pyramid {
     width: 20vw;
-    height: 15vh;
-    top: 68vh;
-    right: 15vw;
+    height: 13vh;
+    top: 75vh;
+    left: 10vw;
   }
 
   .cone {
     width: 20vw;
     height: 10vh;
-    top: 85vh;
-    right: 40vw;
+    top: 70vh;
+    right: 30vw;
   }
 
 /*
@@ -655,27 +656,27 @@ section {
 */
 
   .sphere {
-    width: 20vw;
-    max-width: 20vw;
+    width: 15vw;
+    height: 10vh;
+    right: 7vw;
   }
 
   .ring {
-    width: 15vw;
-    height: 12vh;
+    right: 3vw;
   }
 
   .bg-shape-1, .bg-shape-2, .bg-shape-3 {
-    width: 12vw;
+    width: 13vw;
     height: 12vh;
     filter: blur(10vw);
   }
 
   .bg-shape-1 {
-    right: 0;
+    right: -1;
   }
 
   .bg-shape-2 {
-    left: 0;
+    left: -1;
   }
 
 }
