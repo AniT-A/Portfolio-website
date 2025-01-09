@@ -242,7 +242,7 @@ section {
   justify-content: flex-start;
 }
 
-.projects-title {
+.projects-title h2{
   position: relative;
   display: flex;
   width: auto;
@@ -684,7 +684,7 @@ section {
   ************************* 3D-PROJECTS PAGE *************************
 */
 
-.design {
+.project-frame {
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -693,11 +693,11 @@ section {
   background: linear-gradient(45deg, rgba(66,27,148,1) 0%, rgba(49,20,111,1) 10%, rgba(29,12,65,1) 25%, rgba(29,12,65,1) 50%, rgba(29,12,65,1) 75%, rgba(49,20,111,1) 90%, rgba(66,27,148,1) 100%);
 }
 
-.design-title {
+.project-title h2{
   position: relative;
   display: flex;
-  width: 30vw;
-  height: 10vh;
+  width: auto;
+  height: auto;
   top: auto;
   margin: auto;
   padding: auto;
@@ -710,7 +710,27 @@ section {
   color: #ffffff;
   font-size: clamp(1rem, 3vw, 3rem);
   letter-spacing: 0.2rem;
-  line-height: normal;
+  line-height: 2;
+}
+
+.project-title h3 {
+  position: relative;
+  display: flex;
+  width: auto;
+  height: auto;
+  top: auto;
+  margin: auto;
+  padding: auto;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  text-align: center;
+  font-family: "Noto Sans", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: clamp(0.5rem, 1.2vw, 2rem);
+  letter-spacing: 0.1rem;
+  line-height: 2;
 }
 
 .carousels {
@@ -727,12 +747,14 @@ section {
   align-items: center;
   justify-content: center;
   top: auto;
-  margin-top: 2vw;
-  margin-bottom: 2vw;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
   width: 70vw;
-  height: 70vh;
+  height: auto;
   overflow: auto;
   background-image: url(../images/rectangle-projects.svg);
   object-fit: cover;
@@ -827,11 +849,7 @@ section {
   background-color: #702ffc;
 }
 
-/*
-  ************************* CODE-PROJECTS PAGE *************************
-*/
-
-.code-text {
+.project-text {
   display: flex;
   flex-direction: column;
   margin: 5vh 5vw;
@@ -840,10 +858,14 @@ section {
   font-weight: 400;
   color: #ffffff;
   font-size: clamp(0.5rem, 1.2vw, 2rem);
-  letter-spacing: 1px;
+  letter-spacing: 0.1rem;
   line-height: 1.5;
   text-align: justify;
 }
+
+/*
+  ************************* CODE-PROJECTS PAGE *************************
+*/
 
 .code-icons {
   display: flex;
