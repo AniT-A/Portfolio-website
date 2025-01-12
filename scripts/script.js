@@ -30,6 +30,11 @@ function showSlides(n, no) {
         dots[i].className = dots[i].className.replace(" active", "");
     }
 
-    slides[slideIndex[no] - 1].style.display = "block";
-    dots[slideIndex[no] - 1].className += " active";
+    if (slides[slideIndex[no] - 1]) {
+        slides[slideIndex[no] - 1].style.display = "block";
+    }
+
+    if (dots[slideIndex[no] - 1]) {
+        dots[slideIndex[no] - 1].className += " active";
+    }
 }

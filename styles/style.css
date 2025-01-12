@@ -864,6 +864,14 @@ section {
   text-align: justify;
 }
 
+.project-text h2 {
+  width: auto;
+  font-family: "Anton", Helvetica;
+  font-size: clamp(1rem, 2vw, 2.5rem);
+  letter-spacing: 3px;
+  line-height: 2;
+}
+
 /*
   ************************* CODE-PROJECTS PAGE *************************
 */
