@@ -694,7 +694,7 @@ section {
   background: linear-gradient(45deg, rgba(66,27,148,1) 0%, rgba(49,20,111,1) 10%, rgba(29,12,65,1) 25%, rgba(29,12,65,1) 50%, rgba(29,12,65,1) 75%, rgba(49,20,111,1) 90%, rgba(66,27,148,1) 100%);
 }
 
-.project-title h2{
+.page-title h2{
   position: relative;
   display: flex;
   width: auto;
@@ -714,7 +714,7 @@ section {
   line-height: 2;
 }
 
-.project-title h3 {
+.page-title h3 {
   position: relative;
   display: flex;
   width: auto;
@@ -728,6 +728,16 @@ section {
   text-align: center;
   font-family: "Noto Sans", Helvetica;
   font-weight: 400;
+  color: #ffffff;
+  font-size: clamp(0.5rem, 1.2vw, 2rem);
+  letter-spacing: 0.1rem;
+  line-height: 2;
+}
+
+.project-title h3 {
+  text-align: center;
+  font-family: "Noto Sans", Helvetica;
+  font-weight: 600;
   color: #ffffff;
   font-size: clamp(0.5rem, 1.2vw, 2rem);
   letter-spacing: 0.1rem;
