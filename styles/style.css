@@ -1,4 +1,3 @@
-
 body {
   position: relative;
   display: flex;
@@ -12,8 +11,22 @@ body {
   /*flex: 0 0 auto;*/
 }
 
+body.light-theme {
+  background: var(--Background, linear-gradient(to bottom right, #B197FF 0%, #8D67FF 50%) bottom right / 50% 50% no-repeat, linear-gradient(to bottom left, #B197FF 0%, #8D67FF 50%) bottom left / 50% 50% no-repeat, linear-gradient(to top left, #B197FF 0%, #8D67FF 50%) top left / 50% 50% no-repeat, linear-gradient(to top right, #B197FF 0%, #8D67FF 50%) top right / 50% 50% no-repeat);
+  color: #200d49;
+}
+
 nav {
   position: fixed;
+  display: flex;
+  width: 100vw;
+  height: 10vh;
+  top: 0;
+  z-index: 100;
+}
+
+.header-background {
+  position: relative;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -23,11 +36,11 @@ nav {
   width: 100vw;
   height: 10vh;
   top: 0;
-  z-index: 100;
+  z-index: 0;
 }
-
-.header-background {
-  position: fixed;
+.header-background::before {
+  content: '';
+  position: absolute;
   width: 100vw;
   height: 10vh;
   top: 0;
@@ -37,6 +50,7 @@ nav {
       rgb(54, 24, 124) 33%,
       rgb(90, 40, 200) 66%,
       rgb(120, 50, 255) 100%);
+  z-index: -1;
 }
 
 .header-title {
@@ -58,7 +72,6 @@ nav {
   display: flex;
   width: auto;
   height: auto;
-  right: 3vw;
   gap: 4vw;
 }
 
@@ -90,6 +103,31 @@ nav {
   display: block;
 }
 
+.theme {
+  position: relative;
+  display: flex;
+  width: auto;
+  height: auto;
+  right: 3vw;
+}
+
+#theme-switch {
+  position: relative;
+  display: flex;
+  width: auto;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+}
+
+.theme-icon {
+  width: 3vw;
+  height: 3vh;
+  color: #ffffff;
+}
+
 section {
   position: relative;
   display: flex;
@@ -115,12 +153,15 @@ section {
   background-size: 100% 100%;
   z-index: 1;
 }
+body.light-theme .ellipse-a1 {
+  visibility: hidden;
+}
 
 .about-left {
   position: relative;
   display: flex;
   width: 30vw;
-  height: 90vh;
+  height: 100vh;
 }
 
 .portrait {
@@ -145,6 +186,9 @@ section {
   background-image: url(../images/ellipse-a2.svg);
   background-size: 100% 100%;
 }
+body.light-theme .ellipse-a2 {
+  visibility: hidden;
+}
 
 .ellipse-a3 {
   position: absolute;
@@ -159,6 +203,9 @@ section {
   background-image: url(../images/ellipse-a3.svg);
   background-size: 100% 100%;
 }
+body.light-theme .ellipse-a3 {
+  visibility: hidden;
+}
 
 .about-right {
   position: relative;
@@ -166,7 +213,7 @@ section {
   flex-direction: column;
   justify-content: flex-start;
   width: 70vw;
-  height: 90vh;
+  height: 100vh;
 }
 
 .about-me {
@@ -175,7 +222,7 @@ section {
   flex-direction: column;
   align-items: center;
   width: 65vw;
-  height: auto;
+  height: 100vh;
   margin-top: 10vh;
 }
 
@@ -184,8 +231,8 @@ section {
   display: block;
   width: 100%;
   height: auto;
-  min-height: 50vh;
-  max-height: 80vh;
+  min-height: 70vh;
+  max-height: 95vh;
   object-fit: cover;
   margin-top: 5vh;
 }
@@ -194,7 +241,7 @@ section {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 85%;
   height: fit-content;
   margin-top: 1rem;
   font-family: "Noto Sans", Helvetica;
@@ -437,6 +484,10 @@ section {
   background-image: url(../images/ellipse-c1.svg);
   background-size: 100% 100%;
   z-index: -1;
+}
+
+body.light-theme .ellipse-c1 {
+  visibility: hidden;
 }
 
 .sphere {
@@ -694,13 +745,18 @@ section {
   background: linear-gradient(45deg, rgba(66,27,148,1) 0%, rgba(49,20,111,1) 10%, rgba(29,12,65,1) 25%, rgba(29,12,65,1) 50%, rgba(29,12,65,1) 75%, rgba(49,20,111,1) 90%, rgba(66,27,148,1) 100%);
 }
 
+body.light-theme .project-frame {
+  background: var(--Background, linear-gradient(to bottom right, #B197FF 0%, #8D67FF 50%) bottom right / 50% 50% no-repeat, linear-gradient(to bottom left, #B197FF 0%, #8D67FF 50%) bottom left / 50% 50% no-repeat, linear-gradient(to top left, #B197FF 0%, #8D67FF 50%) top left / 50% 50% no-repeat, linear-gradient(to top right, #B197FF 0%, #8D67FF 50%) top right / 50% 50% no-repeat);
+  color: #200d49;
+}
+
 .page-title h2{
   position: relative;
   display: flex;
   width: auto;
   height: auto;
   top: auto;
-  margin: auto;
+  margin: 3vh auto;
   padding: auto;
   align-items: center;
   justify-content: center;
@@ -720,7 +776,7 @@ section {
   width: auto;
   height: auto;
   top: auto;
-  margin: auto;
+  margin: 3vh auto;
   padding: auto;
   align-items: center;
   justify-content: center;
@@ -880,6 +936,7 @@ section {
   font-size: clamp(1rem, 2vw, 2.5rem);
   letter-spacing: 3px;
   line-height: 2;
+  text-align: center;
 }
 
 /*

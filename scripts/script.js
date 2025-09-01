@@ -38,3 +38,14 @@ function showSlides(n, no) {
         dots[slideIndex[no] - 1].className += " active";
     }
 }
+
+document.getElementById('theme-switch').addEventListener('click', function() {
+    document.body.classList.toggle('light-theme');
+
+    const themeIcon = document.getElementById('theme-icon');
+    if (document.body.classList.contains('light-theme')) {
+      themeIcon.src = "images/dark_mode.svg";
+    } else {
+      themeIcon.src = "images/light_mode.svg";
+    }
+});
